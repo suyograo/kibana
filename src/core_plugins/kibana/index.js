@@ -9,6 +9,7 @@ import settings from './server/routes/api/settings';
 import { scrollSearchApi } from './server/routes/api/scroll_search';
 import { importApi } from './server/routes/api/import';
 import { exportApi } from './server/routes/api/export';
+import { setupModuleApi } from './server/routes/api/modules';
 import scripts from './server/routes/api/scripts';
 import { registerSuggestionsApi } from './server/routes/api/suggestions';
 import { registerFieldFormats } from './server/field_formats/register';
@@ -147,6 +148,7 @@ export default function (kibana) {
       scrollSearchApi(server);
       importApi(server);
       exportApi(server);
+      setupModuleApi(server);
       registerSuggestionsApi(server);
       registerFieldFormats(server);
 
